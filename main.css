@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: hsl(212, 45%, 89%);
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#card {
+    --card-margin: 2rem;
+    --card-width: calc(375px - (2 * var(--card-margin)));
+
+    width: var(--card-width);
+    margin: var(--card-margin);
+    box-shadow: 0px 15px 20px 2px rgba(184, 195, 209, 0.2);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+#qr-code {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#text-block {
+    --text-margin: 1rem;
+
+    padding: 0.5rem 0.5rem;
+}
+
+#title {
+    --title-color: hsl(218, 44%, 22%);
+    --title-size: 1.5em;
+    --title-weight: 700;
+
+    margin-bottom: var(--text-margin);
+    color: var(--title-color);
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+}
+
+#subtitle {
+    --subtitle-color: hsl(220, 15%, 55%);
+    --subtitle-size: 1em;
+    --subtitle-weight: 400;
+
+    margin-bottom: var(--text-margin);
+    color: var(--subtitle-color);
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-weight);
+}
+
+@media (min-width: 1440px) {
+    #text-block {
+        padding: 0.5rem 1rem;
+    }
+
+    #title {
+        font-size: var(--title-size);
+    }
+
+    #subtitle {
+        font-size: calc(var(--subtitle-size) + .25em);
+    }
+}
